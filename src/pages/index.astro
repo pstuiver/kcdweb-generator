@@ -1463,7 +1463,7 @@ import Layout from "../layouts/Layout.astro"
                       </div>
                     </div>
                     <a
-                      href="./views/about-attention.html"
+                      href="../views/about-attention.html"
                       target="_self"
                       class="grid-card-btn blue-on-white"
                       >Read more
@@ -1765,3 +1765,17 @@ import Layout from "../layouts/Layout.astro"
       </section>
     </div>
 <Layout />
+
+<style>
+  .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+</style>
