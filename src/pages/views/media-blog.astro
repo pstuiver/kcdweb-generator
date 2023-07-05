@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro" ;
+---
+
+<Layout titleBack=" - Blog">
+  <div style="display: contents">
+    <div class="views-head gray-on-blue">
+      <div class="flex items-center">
+        <a href="javascript:history.go(-1)"
+          ><div>
+            <svg viewBox="0 0 48 48" class="views-head-icon">
+              <title>Back arrow icon</title>
+              <path
+                stroke-linejoin="round"
+                d="M13,24.5 23,13.5 23,20.5 34,20.5 34,28.5 23,28.5 23,35.5Z"
+              ></path>
+            </svg>
+          </div></a
+        >
+        <span class="views-head-back" aria-hidden="true">back</span>
+      </div>
+      <div class="views-head-text">kidzcandurban.blogspot.com</div>
+      <div class="views-head-dummy">&nbsp;</div>
+    </div>
+    <div
+      class="flex flex-col items-center relative w-full h-screen m-0 p-0"
+      data-svelte-h="svelte-13muhk3">
+      <div
+        class="absolute origin-top width-full h-screen scale-[0.43] xs:iframescale-xs sm:iframescale-sm md:iframescale-md -mt-16 xs:-iframemt-xs sm:-iframemt-sm md:-iframemt-md svelte-19c54l5">
+        <iframe
+          title="kidzcandurban blog"
+          width="780px"
+          height="250%"
+          class=""
+          src="https://kidzcandurban.blogspot.com"></iframe>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @media (min-width: 480px) {
+    .xs\:iframescale-xs.svelte-19c54l5 {
+      --tw-scale-x: 0.6;
+      --tw-scale-y: 0.6;
+      transform: var(--tw-transform);
+    }
+
+    .xs\:-iframemt-xs.svelte-19c54l5 {
+      margin-top: -7rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sm\:iframescale-sm.svelte-19c54l5 {
+      --tw-scale-x: 0.92;
+      --tw-scale-y: 0.92;
+      transform: var(--tw-transform);
+    }
+
+    .sm\:-iframemt-sm.svelte-19c54l5 {
+      margin-top: -12rem;
+    }
+  }
+
+  @media (min-width: 976px) {
+    .md\:iframescale-md.svelte-19c54l5 {
+      --tw-scale-x: 1.1;
+      --tw-scale-y: 1.1;
+      transform: var(--tw-transform);
+    }
+
+    .md\:-iframemt-md.svelte-19c54l5 {
+      margin-top: -14rem;
+    }
+  }
+</style>
