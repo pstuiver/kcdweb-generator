@@ -1,27 +1,35 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-const build = true;
+const build = import.meta.env.PROD;
+const titleBack = " - Autism";
+const headClass = "views-head blue-on-white";
+const headTitle = "Autism Spectrum Disorder";
+const mainClass = "views-content gray-on-blue";
 ---
 
-<Layout titleBack=" - Autism">
+<Layout titleBack={titleBack}>
   <div style="display: contents">
     <div class="views-container">
-      <div class="views-head blue-on-white">
-        <div class="flex items-center">
-          <a href="javascript:history.go(-1)"
-            ><div>
-              <svg viewBox="0 0 48 48" class="views-head-icon">
-                <title>Back arrow icon</title>
-                <path d="M13,24 23,13 23,20 34,20 34,28 23,28 23,35Z"></path>
-              </svg>
-            </div></a
-          >
-          <span class="views-head-back" aria-hidden="true">back</span>
-        </div>
-        <div class="views-head-text">Autism Spectrum Disorder</div>
-        <div class="views-head-dummy">&nbsp;</div>
-      </div>
-      <div class="views-content gray-on-blue">
+      <header class={headClass}>
+        <nav class="w-full">
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center">
+              <a href="javascript:history.back()">
+                <svg viewBox="0 0 48 48" class="views-head-icon">
+                  <title>Back arrow icon</title>
+                  <path d="M13,24 23,13 23,20 34,20 34,28 23,28 23,35Z"></path>
+                </svg>
+              </a>
+              <span class="views-head-back" aria-hidden="true">back</span>
+            </div>
+
+            <h1 class="views-head-text">{headTitle}</h1>
+            <div class="views-head-dummy" aria-hidden="true">&nbsp;</div>
+          </div>
+        </nav>
+      </header>
+
+      <main class={mainClass}>
         <p>
           Link to :
           <a
@@ -83,7 +91,8 @@ const build = true;
           <li class="mt-2">
             <span class="font-semibold italic">Social interaction:</span>
             Sensory Integration, DIR,
-            <a class="views-link"
+            <a
+              class="views-link"
               href={build
                 ? "./services-skills-dev.html"
                 : "./services-skills-dev"}
@@ -97,7 +106,8 @@ const build = true;
             <span class="font-semibold italic mt-1"
               >Imagination and Creative play:
             </span>Sensory Integration and
-            <a class="views-link"
+            <a
+              class="views-link"
               href={build
                 ? "./services-dir-floortime.html"
                 : "./services-dir-floortime"}
@@ -111,7 +121,8 @@ const build = true;
             <span class="font-semibold italic"
               >Sensory Integration difficulties:</span
             >
-            <a class="views-link"
+            <a
+              class="views-link"
               href={build
                 ? "./services-sensory-int.html"
                 : "./services-sensory-int"}
@@ -119,14 +130,16 @@ const build = true;
             >
             techniques are used to address the child’s behaviour, emotional responses,
             focus and attention. This may include the implementation of a
-            <a class="views-link"
+            <a
+              class="views-link"
               href={build
                 ? "./services-sensory-diet.html"
                 : "./services-sensory-diet"}
               target="_self">Sensory Diet</a
             >
             and/or an
-            <a class="views-link"
+            <a
+              class="views-link"
               href={build
                 ? "./services-alert-program.html"
                 : "./services-alert-program"}
@@ -137,7 +150,7 @@ const build = true;
           </li>
         </ul>
         <p class="text-center">- - - END - - -</p>
-      </div>
+      </main>
     </div>
   </div>
 </Layout>

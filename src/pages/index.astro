@@ -1,9 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// Note to Paul
-// This should not work but it does
-// It serves to add .html to local links during npm run build
-const build = true;
+/* required to add .html to ....astro links during npm run build with current setting */
+const build = import.meta.env.PROD;
 ---
 
 <Layout>
@@ -430,7 +428,6 @@ const build = true;
               >
             </div>
           </main>
-
         </section>
 
         <section class="section-wrapper blue-on-white">

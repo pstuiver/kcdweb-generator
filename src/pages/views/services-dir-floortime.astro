@@ -1,26 +1,35 @@
 ---
 import Layout from "../../layouts/Layout.astro" ;
+const build = import.meta.env.PROD;
+const titleBack = " - Floortime";
+const headClass = "views-head gray-on-blue";
+const headTitle = "DIR and Floortime";
+const mainClass = "views-content blue-on-white";
 ---
 
-<Layout titleBack=" - DIR/Floortime">
+<Layout titleBack={titleBack}>
   <div style="display: contents">
     <div class="views-container">
-      <div class="views-head gray-on-blue">
-        <div class="flex items-center">
-          <a href="javascript:history.go(-1)"
-            ><div>
-              <svg viewBox="0 0 48 48" class="views-head-icon">
-                <title>Back arrow icon</title>
-                <path d="M13,24 23,13 23,20 34,20 34,28 23,28 23,35Z"></path>
-              </svg>
-            </div></a
-          >
-          <span class="views-head-back" aria-hidden="true">back</span>
-        </div>
-        <div class="views-head-text">DIR &amp; Floortime</div>
-        <div class="views-head-dummy">&nbsp;</div>
-      </div>
-      <div class="views-content blue-on-white">
+      <header class={headClass}>
+        <nav class="w-full">
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center">
+              <a href="javascript:history.back()">
+                <svg viewBox="0 0 48 48" class="views-head-icon">
+                  <title>Back arrow icon</title>
+                  <path d="M13,24 23,13 23,20 34,20 34,28 23,28 23,35Z"></path>
+                </svg>
+              </a>
+              <span class="views-head-back" aria-hidden="true">back</span>
+            </div>
+
+            <h1 class="views-head-text">{headTitle}</h1>
+            <div class="views-head-dummy" aria-hidden="true">&nbsp;</div>
+          </div>
+        </nav>
+      </header>
+
+      <main class={mainClass}>
         <p class="font-bold">
           DIR - Developmental Individual Difference Relationship Model
         </p>
@@ -87,7 +96,7 @@ import Layout from "../../layouts/Layout.astro" ;
           >
         </p>
         <p class="text-center">- - - END - - -</p>
-      </div>
+      </main>
     </div>
   </div>
 </Layout>

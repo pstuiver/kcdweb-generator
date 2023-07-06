@@ -1,26 +1,35 @@
 ---
-import Layout from "../../layouts/Layout.astro" ;
+import Layout from "../../layouts/Layout.astro";
+const build = import.meta.env.PROD;
+const titleBack = " - Alert Program";
+const headClass = "views-head gray-on-blue";
+const headTitle = "Alert Program";
+const mainClass = "views-content blue-on-white";
 ---
 
-<Layout titleBack=" - Alert Program">
+<Layout titleBack={titleBack}>
   <div style="display: contents">
     <div class="views-container">
-      <div class="views-head gray-on-blue">
-        <div class="flex items-center">
-          <a href="javascript:history.go(-1)"
-            ><div>
-              <svg viewBox="0 0 48 48" class="views-head-icon">
-                <title>Back arrow icon</title>
-                <path d="M13,24 23,13 23,20 34,20 34,28 23,28 23,35Z"></path>
-              </svg>
-            </div></a
-          >
-          <span class="views-head-back" aria-hidden="true">back</span>
-        </div>
-        <div class="views-head-text">Alert Program</div>
-        <div class="views-head-dummy">&nbsp;</div>
-      </div>
-      <div class="views-content blue-on-white">
+      <header class={headClass}>
+        <nav class="w-full">
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center">
+              <a href="javascript:history.back()">
+                <svg viewBox="0 0 48 48" class="views-head-icon">
+                  <title>Back arrow icon</title>
+                  <path d="M13,24 23,13 23,20 34,20 34,28 23,28 23,35Z"></path>
+                </svg>
+              </a>
+              <span class="views-head-back" aria-hidden="true">back</span>
+            </div>
+
+            <h1 class="views-head-text">{headTitle}</h1>
+            <div class="views-head-dummy" aria-hidden="true">&nbsp;</div>
+          </div>
+        </nav>
+      </header>
+
+      <main class={mainClass}>
         <p>
           The Alert Program was developed by Occupational Therapists to teach
           children self-regulation and to teach adults how to support learning,
@@ -49,7 +58,7 @@ import Layout from "../../layouts/Layout.astro" ;
           needs.
         </p>
         <p class="text-center">- - - END - - -</p>
-      </div>
+      </main>
     </div>
   </div>
 </Layout>
