@@ -8,12 +8,12 @@ const build = true;
 
 <Layout>
   <div style="display: contents">
-    <section id="home-page">
+    <div id="home-page">
       <div class="w-full max-w-7xl mx-auto">
-        <div
+        <header
           class="z-10 top-0 fixed flex max-w-7xl w-full text-neutral-900 bg-white items-center justify-between border-b border-neutral-50">
           <div class="flex-column w-full">
-            <div class="flex flex-row w-full items-center" role="banner">
+            <div class="flex flex-row w-full items-center">
               <picture
                 ><source
                   srcset="
@@ -41,9 +41,9 @@ const build = true;
                 /></picture
               >
               <div class="flex-column w-full text-center">
-                <div class="m-0 font-bold text-md md:text-xl lg:text-2xl">
+                <h1 class="m-0 font-bold text-md md:text-xl lg:text-2xl">
                   Elsje Stuiver - Occupational Therapy
-                </div>
+                </h1>
                 <div
                   class="m-0 font-medium text-xs md:text-sm lg:text-base"
                   aria-hidden="true">
@@ -167,11 +167,13 @@ const build = true;
               >
             </nav>
           </div>
-        </div>
+        </header>
         <div class="top-0 w-full h-16 md:h-20 lg:h-24">&nbsp;</div>
-        <div class="section-wrapper blue-on-gray py-2">
+
+        <section class="section-wrapper blue-on-gray py-2">
           <div id="home" class="section-id">&nbsp;</div>
-          <div class="-mx-4 flex">
+
+          <main class="-mx-4 flex">
             <div
               class="hidden md:flex md:flex-col md:flex-grow md:justify-around pl-6 pr-3"
               aria-hidden="true">
@@ -427,8 +429,10 @@ const build = true;
                 /></picture
               >
             </div>
-          </div>
-        </div>
+          </main>
+
+        </section>
+
         <section class="section-wrapper blue-on-white">
           <div id="therapist" class="section-id">&nbsp;</div>
           <div class="section-head">
@@ -810,10 +814,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/services-sensory-int.html"
-                    : "./views/services-sensory-int"}
-                  target="_self"
+                    href={build
+                      ? "./views/services-sensory-int.html"
+                      : "./views/services-sensory-int"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     >Read more
                     <span class="sr-only">about Sensory Integration</span>...</a
@@ -1039,10 +1043,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/services-alert-program.html"
-                    : "./views/services-alert-program"}
-                  target="_self"
+                    href={build
+                      ? "./views/services-alert-program.html"
+                      : "./views/services-alert-program"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     >Read more
                     <span class="sr-only">about our alert program</span>...</a
@@ -1073,10 +1077,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/services-handwriting.html"
-                    : "./views/services-handwriting"}
-                  target="_self"
+                    href={build
+                      ? "./views/services-handwriting.html"
+                      : "./views/services-handwriting"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     >Read more
                     <span class="sr-only">about our handwriting program</span
@@ -1118,10 +1122,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/services-skills-dev.html"
-                    : "./views/services-skills-dev"}
-                  target="_self"
+                    href={build
+                      ? "./views/services-skills-dev.html"
+                      : "./views/services-skills-dev"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     >Read more
                     <span class="sr-only">about skills development</span>...</a
@@ -1153,10 +1157,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/services-school-visits.html"
-                    : "./views/services-school-visits"}
-                  target="_self"
+                    href={build
+                      ? "./views/services-school-visits.html"
+                      : "./views/services-school-visits"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     >Read more
                     <span class="sr-only">about school visits</span>...</a
@@ -1195,10 +1199,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/services-parent-support.html"
-                    : "./views/services-parent-support"}
-                  target="_self"
+                    href={build
+                      ? "./views/services-parent-support.html"
+                      : "./views/services-parent-support"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     >Read more
                     <span class="sr-only">about parent support</span>...</a
@@ -1327,10 +1331,8 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/about-ot.html"
-                    : "./views/about-ot"}
-                  target="_self"
+                    href={build ? "./views/about-ot.html" : "./views/about-ot"}
+                    target="_self"
                     class="grid-card-btn blue-on-white"
                     >Read more
                     <span class="sr-only">about Occupational Therapy</span
@@ -1389,10 +1391,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/about-autism.html"
-                    : "./views/about-autism"}
-                  target="_self"
+                    href={build
+                      ? "./views/about-autism.html"
+                      : "./views/about-autism"}
+                    target="_self"
                     class="grid-card-btn blue-on-white"
                     >Read more
                     <span class="sr-only">about autism spectrum disorder</span
@@ -1461,10 +1463,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/about-aac.html"
-                    : "./views/about-aac"}
-                  target="_self"
+                    href={build
+                      ? "./views/about-aac.html"
+                      : "./views/about-aac"}
+                    target="_self"
                     class="grid-card-btn blue-on-white"
                     >Read more
                     <span class="sr-only"
@@ -1537,10 +1539,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/about-attention.html"
-                    : "./views/about-attention"}
-                  target="_self"
+                    href={build
+                      ? "./views/about-attention.html"
+                      : "./views/about-attention"}
+                    target="_self"
                     class="grid-card-btn blue-on-white"
                     >Read more
                     <span class="sr-only"
@@ -1602,10 +1604,10 @@ const build = true;
                     <div class="grid-card-text">Read our blog</div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/media-blog.html"
-                    : "./views/media-blog"}
-                  target="_self"
+                    href={build
+                      ? "./views/media-blog.html"
+                      : "./views/media-blog"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     ><span class="sr-only">Read our</span>Blog Posts...<span
                       class="sr-only"
@@ -1645,10 +1647,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/media-reviews.html"
-                    : "./views/media-reviews"}
-                  target="_self"
+                    href={build
+                      ? "./views/media-reviews.html"
+                      : "./views/media-reviews"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     ><span class="sr-only">Read our client</span>Reviews ...</a
                   >
@@ -1678,10 +1680,10 @@ const build = true;
                     </div>
                   </div>
                   <a
-                  href={build
-                    ? "./views/media-privacy.html"
-                    : "./views/media-privacy"}
-                  target="_self"
+                    href={build
+                      ? "./views/media-privacy.html"
+                      : "./views/media-privacy"}
+                    target="_self"
                     class="grid-card-btn white-on-blue"
                     ><span class="sr-only">Read our privacy</span>Policy ...</a
                   >
@@ -1843,7 +1845,7 @@ const build = true;
           </div>
         </section>
 
-        <section id="footer-section" aria-label="footer area of web page">
+        <footer id="footer-area" aria-label="footer area">
           <div
             class="py-2 relative w-full border-b border-blue-700 gray-on-blue">
             <div class="flex items-center justify-around text-xs xs:text-sm">
@@ -1857,9 +1859,8 @@ const build = true;
               </div>
             </div>
           </div>
-        </section>
+        </footer>
       </div>
-    </section>
+    </div>
   </div>
-  <Layout />
 </Layout>
