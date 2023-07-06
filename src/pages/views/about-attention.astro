@@ -1,7 +1,7 @@
 ---
-import Layout from "../../layouts/Layout.astro" ;
+import Layout from "../../layouts/Layout.astro";
+const build = true;
 ---
-
 <Layout titleBack=" - Attention">
   <div style="display: contents">
     <div class="views-container">
@@ -12,8 +12,9 @@ import Layout from "../../layouts/Layout.astro" ;
               <svg viewBox="0 0 48 48" class="views-head-icon">
                 <title>Back arrow icon</title>
                 <path d="M13,24 23,13 23,20 34,20 34,28 23,28 23,35Z"></path>
-              </svg></div
-          ></a>
+              </svg>
+            </div></a
+          >
           <span class="views-head-back" aria-hidden="true">back</span>
         </div>
         <div class="views-head-text">Attention and Concentration</div>
@@ -27,11 +28,11 @@ import Layout from "../../layouts/Layout.astro" ;
         </p>
         <p>
           Hence our focus on conducting comprehensive
-          <a
-            class="views-link"
-            href="./services-ot-assessment"
-            target="_self"
-            >Occupational Therapy assessments</a
+          <a class="views-link"
+            href={build
+              ? "./services-ot-assessment.html"
+              : "./services-ot-assessment"}
+            target="_self">Occupational Therapy assessments</a
           >to assist our therapists in identifying aspects that may be affecting
           a child’s ability to focus and attend.
         </p>
@@ -62,18 +63,18 @@ import Layout from "../../layouts/Layout.astro" ;
           <li>
             Addressing sensory modulation difficulties through the
             implementation of a
-            <a
-              class="views-link"
-              href="./services-sensory-diet"
-              target="_self"
-              >Sensory Diet</a
+            <a class="views-link"
+              href={build
+                ? "./services-sensory-diet.html"
+                : "./services-sensory-diet"}
+              target="_self">Sensory Diet</a
             >
             or an
-            <a
-              class="views-link"
-              href="./services-alert-program"
-              target="_self"
-              >Alert Program</a
+            <a class="views-link"
+              href={build
+                ? "./services-alert-program.html"
+                : "./services-alert-program"}
+              target="_self">Alert Program</a
             >
             depending on the child’s needs and abilities.
           </li>

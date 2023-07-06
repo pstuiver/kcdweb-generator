@@ -4,11 +4,11 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-
-
-  output: "static",
   build: {
-    assetsPrefix: `../..`,
+    output:'static',
+    redirects:true,
+    format: 'file',
+    assetsPrefix: '..'
   },
 
   integrations: [

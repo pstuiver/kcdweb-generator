@@ -1,5 +1,6 @@
 ---
-import Layout from "../../layouts/Layout.astro" ;
+import Layout from "../../layouts/Layout.astro";
+const build = true;
 ---
 
 <Layout titleBack=" - Parent Support">
@@ -36,10 +37,12 @@ import Layout from "../../layouts/Layout.astro" ;
         </p>
         <p>
           After the
-          <a
-            class="views-link"
-            href="./services-ot-assessment"
-            target="_self">Occupational Therapy Assessment</a
+          <a class="views-link"
+            href={build
+              ? "./services-ot-assessment.html"
+              : "./services-ot-assessment"}
+            target="_self"
+            class="views-link">Occupational Therapy Assessment</a
           >
           and before commencing the therapy process, the parents and child will be
           provided with opportunity to collaborate on setting the goals for therapy.

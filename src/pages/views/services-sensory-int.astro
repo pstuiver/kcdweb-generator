@@ -1,5 +1,6 @@
 ---
-import Layout from "../../layouts/Layout.astro" ;
+import Layout from "../../layouts/Layout.astro";
+const build = true;
 ---
 
 <Layout titleBack=" - Sensory Integration">
@@ -124,14 +125,18 @@ import Layout from "../../layouts/Layout.astro" ;
         <p>
           To achieve these aims the therapist may recommend a
           <a
-            class="views-link"
-            href="./services-sensory-diet"
-            target="_self">Sensory Diet</a
+            href={build
+              ? "./services-sensory-diet.html"
+              : "./services-sensory-diet"}
+            target="_self"
+            class="views-link">Sensory Diet</a
           >
-          or an<a
-            class="views-link"
-            href="./services-alert-program"
-            target="_self">Alert Program</a
+          or an <a
+            href={build
+              ? "./services-alert-program.html"
+              : "./services-alert-program"}
+            target="_self"
+            class="views-link">Alert Program</a
           >, depending on the child's needs and abilities.
         </p>
         <p class="text-center">- - - END - - -</p>
