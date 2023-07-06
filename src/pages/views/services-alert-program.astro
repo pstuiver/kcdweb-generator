@@ -1,13 +1,19 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 const build = import.meta.env.PROD;
+const hrefApple = import.meta.env.PROD
+  ? "../apple-touch-icon.png"
+  : "/apple-touch-icon.png";
+const hrefSafari = import.meta.env.PROD
+  ? "../safari-pinned-tab.svg"
+  : "/safari-pinned-tab.svg";
 const titleBack = " - Alert Program";
 const headClass = "views-head gray-on-blue";
 const headTitle = "Alert Program";
 const mainClass = "views-content blue-on-white";
 ---
 
-<Layout titleBack={titleBack}>
+<Layout titleBack={titleBack} hrefApple={hrefApple} hrefSafari={hrefSafari}>
   <div style="display: contents">
     <div class="views-container">
       <header class={headClass}>
