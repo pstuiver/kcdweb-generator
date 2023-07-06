@@ -2,9 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 /* required to add .html to ....astro links during npm run build with current setting */
 const build = import.meta.env.PROD;
+const hrefApple = import.meta.env.PROD
+  ? "./apple-touch-icon.png"
+  : "/apple-touch-icon.png";
+const hrefSafari = import.meta.env.PROD
+  ? "./safari-pinned-tab.svg"
+  : "/safari-pinned-tab.svg";
 ---
 
-<Layout>
+<Layout hrefApple={hrefApple} hrefSafari={hrefSafari}>
   <div style="display: contents">
     <div id="home-page">
       <div class="w-full max-w-7xl mx-auto">

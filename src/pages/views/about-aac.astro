@@ -1,13 +1,19 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 const build = import.meta.env.PROD;
+const hrefApple = import.meta.env.PROD
+  ? "../apple-touch-icon.png"
+  : "/apple-touch-icon.png";
+const hrefSafari = import.meta.env.PROD
+  ? "../safari-pinned-tab.svg"
+  : "/safari-pinned-tab.svg";
 const titleBack = ' - AAC';
 const headClass = "views-head blue-on-white";
 const headTitle = "Augmentative Alternative Communication";
 const mainClass = "views-content gray-on-blue";
 ---
 
-<Layout titleBack={titleBack}>
+<Layout titleBack={titleBack} hrefApple={hrefApple} hrefSafari={hrefSafari}>
   <div style="display: contents">
     <div class="views-container">
       <header class={headClass}>
