@@ -14,6 +14,7 @@ npm run build produces all files for the www.kidzcandurban.com site - with ONE W
 
 After editing/fixing this one issue in /dist/index.html all files in /dist can be copied "as is" to the kcdwebsite repo for commit/deploy to Github Pages.
 
-Or the /dist folder can be uplaoded to netlify for a manual deploy to kcd-test.netlify.app
+Or the /dist folder can be uploaded to netlify for a manual deploy to kcd-test.netlify.app
+Don't want to auto-deploy to Netlify because of the current WIP build error. 
 
 Reason for having two repositories for kcdwebsite files is that I would prefer a seperate repo to learn more about Astro and to test updates in a "live deploy" not just a localhost environment", to run tests on mobile, screen readers, etc before making changes to the "real" site at www.kidzcandurban.com
