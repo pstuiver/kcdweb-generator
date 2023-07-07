@@ -10,7 +10,7 @@ www.kidzcandurban.com
 - use image files with webp/avif/jpg formats from the /public folder
 - output images in public folder to /dist/images during build
 
-npm run build produces all files for the www.kidzcandurban.com site - with ONE ISSUE - that is that the <head> in /dist/index.html points to css files at href="../css/index[hash].css" and this path is wrong - should have only one period in the path i.e. href="./css/index[hash].css".
+npm run build produces all files for the www.kidzcandurban.com site - with ONE WIP ISSUE - that is that the <head> in /dist/index.html points to css files at href="../css/index[hash].css" and this path is wrong - should have only one period in the path i.e. href="./css/index[hash].css".
 
 After editing/fixing this one issue in /dist/index.html all files in /dist can be copied "as is" to the kcdwebsite repo for commit/deploy to Github Pages.
 
