@@ -26,7 +26,7 @@ li {
   @apply text-blue-800 bg-neutral-200;
 }
 .white-on-blue {
-  @apply text-neutral-50 bg-blue-800;
+  @apply text-white bg-blue-800;
 }
 .gray-on-blue {
   @apply text-neutral-50 bg-blue-800;
